@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration and Login page</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <!-- Make sure to change the {APP_NAME} in the Register an Login button URL to your LoginRadius App name -->
+            <div class="access">
+                <span>Open an account with us</span>
+
+                <!-- Register button -->
+                <button onclick="window.location.href='https://{APP_NAME}.hub.loginradius.com/auth.aspx?action=register&return_url=http://127.0.0.1:8000/';">
+                    Register
+                </button>
+            </div>
+
+            <div class="choice">
+                <span>OR</span><br>
+                <span>If you already have account</span>
+            </div>
+            
+            <div class="access">
+                <span>Log into your account</span>
+
+                <!-- Login button -->
+                <button onclick="window.location.href='https://{APP_NAME}.hub.loginradius.com/auth.aspx?action=login&return_url=http://127.0.0.1:8000/profile/';">
+                    Login
+                </button>
+            </div>
+
+        </div>
+    </body>
+</html>

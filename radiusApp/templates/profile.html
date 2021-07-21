@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+        <title>Profile</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="profile">
+
+                <div class="profile__head">
+                    <h4>profile details</h4>
+                </div>
+
+                <div class="profile__details">
+                    <span>
+                    <span class="label">Provider: </span> {{user_data.Provider}}<br>
+                    {% for i in user_data.Email %}
+                        <span class="label">Email: </span>{{i.Value}}<br>
+                    {% endfor %}
+
+                    <span class="label">Number of login:</span> {{user_data.NoOfLogins}}
+                    </span>
+                </div>
+                
+            </div>            
+        </div>
+    </body>
+</html>
